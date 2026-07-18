@@ -1,0 +1,28 @@
+# Earlier course modules are outside this collection
+/01-node-tutorial/
+/02-express-tutorial/
+
+# Keep completed practice implementations, not duplicate starter copies
+**/starter/
+
+# Dependencies and generated output
+**/node_modules/
+**/build/
+**/coverage/
+**/dist/
+*.log
+npm-debug.log*
+
+# Secrets and local configuration
+**/.env
+**/.env.*
+!**/.env.example
+
+# Uploaded/runtime files
+**/public/uploads/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
