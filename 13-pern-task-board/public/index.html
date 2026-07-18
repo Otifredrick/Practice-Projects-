@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="I built a PostgreSQL and Express task board practice project." />
+    <title>Moveboard | PERN Task Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav><a class="logo" href="/">moveboard<span>.</span></a><span class="stack">Postgres · Express · Node</span></nav>
+      <div class="hero-copy"><span class="eyebrow">PERN practice project</span><h1>I turn small tasks into<br /><em>visible momentum.</em></h1><p>I use this three-stage board to practice PostgreSQL CRUD from the browser to the database.</p></div>
+      <form id="task-form" class="composer"><label for="task-title">Add a new task</label><div><input id="task-title" maxlength="160" placeholder="e.g. document the API" required /><button>Add to board <span>→</span></button></div><p id="message" role="status"></p></form>
+    </header>
+    <main class="board" aria-live="polite">
+      <section class="column" data-status="todo"><header><span class="dot dot-todo"></span><h2>To do</h2><b class="count">0</b></header><div class="task-list"></div></section>
+      <section class="column" data-status="doing"><header><span class="dot dot-doing"></span><h2>In progress</h2><b class="count">0</b></header><div class="task-list"></div></section>
+      <section class="column" data-status="done"><header><span class="dot dot-done"></span><h2>Done</h2><b class="count">0</b></header><div class="task-list"></div></section>
+    </main>
+    <template id="task-template"><article class="task"><p></p><footer><select aria-label="Task status"><option value="todo">To do</option><option value="doing">In progress</option><option value="done">Done</option></select><button class="delete" aria-label="Delete task">×</button></footer></article></template>
+    <script src="app.js"></script>
+  </body>
+</html>
