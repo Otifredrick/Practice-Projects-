@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I built an interactive JWT authentication practice project." />
+    <title>TokenGate | JWT Access Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <span class="hero-badge">Authentication practice lab</span>
+      <h1>I see a JSON Web Token<br />workflow in action.</h1>
+      <p>I sign in, store a token in the browser, and use it to request a protected response from Express.</p>
+    </header>
+    <main class="lab-grid">
+      <form class="form contact-form">
+        <div class="panel-label">01 / Create a token</div>
+        <h2>Enter the lab</h2>
+        <div class="form-row">
+          <label for="username" class="form-label">username</label>
+          <input type="text" class="form-input username-input" placeholder="e.g. Frederick" autocomplete="username" />
+        </div>
+        <div class="form-row">
+          <label for="password" class="form-label">password</label>
+          <input type="password" class="form-input password-input" placeholder="I enter at least 6 characters" autocomplete="current-password" />
+        </div>
+        <div class="text-small form-alert">there was an error</div>
+        <button type="submit" class="btn btn-block">Generate access token</button>
+      </form>
+      <div class="container">
+        <div class="panel-label">02 / Protected request</div>
+        <h2>Private response</h2>
+        <p class="token">no token present</p>
+        <div class="result"></div>
+        <button class="btn btn-block" id="data">Request protected data</button>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./browser-app.js"></script>
+  </body>
+</html>
