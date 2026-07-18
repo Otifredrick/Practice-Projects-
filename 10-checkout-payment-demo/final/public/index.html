@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I built a Stripe Payment Intent practice checkout." />
+    <title>Northstar Checkout | Stripe Demo</title>
+    <!-- global css -->
+    <link rel="stylesheet" href="./global.css" />
+    <!-- local css -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- STRIPE STUFF -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <!-- content -->
+    <section class="section section-center content">
+      <header class="checkout-heading"><span>Stripe test checkout</span><h1>I complete my order.</h1><p>I use this focused payment-intent practice flow without making a real charge.</p></header>
+      <!-- Display a payment form -->
+      <form id="payment-form">
+        <!-- custom stuff -->
+        <div class="order-summary"><div><span>Practice purchase</span><strong>Node.js course notes</strong></div><strong>$49.00</strong></div>
+        <p class="test-card">Test card <code>4242 4242 4242 4242</code> · Any future date · Any CVC</p>
+        <!-- end custom stuff -->
+        <div id="card-element"><!--Stripe.js injects the Card Element--></div>
+        <button id="submit">
+          <div class="spinner hidden" id="spinner"></div>
+          <span id="button-text">Pay securely · $49.00</span>
+        </button>
+        <p id="card-error" role="alert"></p>
+        <p class="result-message hidden">
+          I completed the test payment and can see the result in my
+          <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to
+          pay again.
+        </p>
+      </form>
+    </section>
+    <!-- js -->
+
+    <script src="./browser-app.js"></script>
+  </body>
+</html>
